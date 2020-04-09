@@ -1,0 +1,661 @@
+@charset "UTF-8";
+/* Custom CSS for Hiram House Camp */
+/*
+Color Swatches
+#334036 dk green
+#81a389 light green
+#d04036 red
+#338186 teal
+#e4ddc0 light yellow
+#595050 dk gray
+*/
+
+@font-face {
+    font-family: 'haymakerregular';
+    src: url('fonts/haymaker-webfont.woff2') format('woff2'),
+         url('fonts/haymaker-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* *************** NAVIGATION & MENUS **************** */
+
+header#masthead { background-color: #f8f3ed !important; position: fixed; top: 0; width: 100%; z-index: 999;  }
+
+.navbar { line-height: 1em;  }
+.navbar-brand { width: 100%; padding:0; background: #334036; margin: 0; }
+
+.navbar-toggler {
+	font-size: 1.5rem;
+	border: none;
+	background-color: #d04036;
+}
+
+#utility-holder, .menu-utility-footer { float: right; padding-top: 6px; }
+
+.menu-utility-container { display: inline-block; }
+ul#menu-utility { margin-bottom: 2px; }
+ul#menu-utility li, ul#menu-utility-1 li {
+	display: inline-block;
+	list-style-type: none;
+}
+ul#menu-utility-1, ul#menu-utility-1 li {
+	margin: 0;
+	padding: 5px !important;
+}
+ul#menu-utility-1 li a.nav-link { padding: 0; }
+
+ul li, ul li a:hover {
+	background-color: transparent !important;
+}
+
+.icon-background { color: #338186; }
+
+/* SEARCH BAR */
+
+input[type="search"] {
+  	-webkit-appearance: textfield;
+	font-family: Montserrat, sans-serif;
+	color: #000;
+  	padding: 2px;
+}
+
+.search-field {
+	background-color: #334036;
+	border: 0;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+	width: 70px;
+	height: 30px;
+	padding: 0px;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition: width 400ms ease, background 400ms ease;
+	color: #FFF !important;
+}
+
+/* SIDEBAR SEARCH FOR BLOG */
+.widget_search .search-field, .page-content .search-field { background-color: #FFF; border: 1px solid #dadada; color: #000 !important; }
+
+.search-field:hover, .search-field:focus {
+	background-color: #FFF;
+	cursor: text;
+	outline: 0;
+	width: 180px;
+	color: #000000 !important;
+}
+
+/* SEARCH RESULTS SEARCH FORM */
+.search-submit {
+	background: transparent;
+	color: white; 
+	padding: 0;
+}
+.page-content .search-submit {
+	background: #81a389; 
+	font-family: Montserrat, sans-serif;
+	text-transform: uppercase;
+	padding: 5px 10px;
+}
+
+.btn { border-radius: 0 !important; border: none !important; }
+div#utility-holder .btn { margin-right: 6px; }
+div#utility-holder button { margin: 0px; border: none; }
+
+a.teal { font-size: .8rem; background-color: #338186; border: 0px; border-radius: 0; }
+a.teal:hover { background-color: #266165; }
+
+.navbar-nav { margin-bottom: 20px; }
+
+ul#menu-main li.menu-item-has-children, ul#menu-main-1 li.menu-item-has-children, li.school-camps {
+	width: 13%;
+	margin-right: 1%;
+	margin-top: 20px;
+	padding-top: 6px;
+	border-top: 3px solid #d04036; 
+}
+ul#menu-main-1 li.menu-item-has-children { border-top: none; }
+
+ul#menu-main li ul.sub-menu li, ul#menu-main-1 li, ul#menu-main-1 li ul.sub-menu li { border: none; margin-top: 10px; line-height: 1em; }
+
+ul#menu-main li ul.dropdown-menu { 
+	display: block;
+	background-color: transparent;
+	border: none;
+	min-width: 0 !important;
+	width: 100%;
+}
+
+a.dropdown-item { padding: 5px 0 !important; margin: 0 !important; line-height: 1; }
+a.dropdown-item:hover { color: #338186; }
+
+/* *************** END NAVIGATION *************** */
+
+#content { margin-top: 12px; }
+body.single #content { margin-top: 100px; }
+
+footer#colophon {
+	background-color: #334036 !important;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	margin-top: -2px;
+	padding-bottom: 20px;
+}
+
+.flex-direction-nav a { color: rgba(255,255,255,1) !important; text-shadow: none !important; }
+
+/* *************** CUSTOM CONTENT BACKGROUNDS *************** */
+
+#secondary { background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/yellow-paper-bkgd.jpg); padding-top: 20px; }
+
+.fuzzy-white { height: 65px; }
+
+
+.diamond-shape:before {
+	content: "";
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/white-triangle-top2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 100%;
+	height: 130px;
+}
+.diamond-shape:after {
+	content: "";
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/white-triangle-bot2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	width: 100%;
+	height: 130px;
+}
+
+/* Camper info tab gets covered up by diamond shape*/
+.vc_custom_1516719973348, .vc_custom_1516719973348, .vc_custom_1516719973348 { margin-top: -105px; }
+
+.white-grunge:before {
+	content: "";
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/fuzzy-top.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 75px;
+}
+.white-grunge:after {
+	content: "";
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/fuzzy-bottom.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 65px;
+}
+
+.hilly-edges:before {
+	content: "";
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/02/hilly-edges2-top.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 75px;
+}
+.hilly-edges:after {
+	content: "";
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/02/hilly-edges2-bot.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 65px;
+}
+
+.days-bkgd {
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/arrow-bkgd.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 40px 20px 20px 20px;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 10px;
+	display: inline-block;
+	transition: all .2s ease-in-out;
+}
+.circle:hover { transform: scale(1.1); }
+
+.green-bkgd { background-color: #334036; color: white !important; }
+.lt-green-bkgd { background-color: #81a389; color: white !important; }
+.red-bkgd { background-color: #d04036; color: white !important; }
+.orange-bkgd { background-color: #ef5423; color: white !important; }
+.teal-bkgd { background-color: #338186; color: white !important; }
+.yellow-bkgd { background-color: #e4ddc0; color: white !important; }
+.lt-yellow-bkgd { background-color: #dcdfc1; color: white !important; }
+
+/* ICON CAROUSEL */
+
+.owl-nav div { font-size: 60px !important; border: none !important; background: transparent !important; color: #d04036 !important; }
+.owl-carousel .owl-item img {  }
+
+.vc_images_carousel .vc_carousel-control .icon-next, .vc_images_carousel .vc_carousel-control .icon-prev, 
+.vc_images_carousel .vc_carousel-control .icon-next, .vc_images_carousel .vc_carousel-control .icon-next {
+	width: 90px !important;
+	height: 90px !important; 
+	margin-top: -45px !important;
+	margin-left: -45px !important;
+	font-size: 90px !important;
+	opacity: 1 !important;
+}
+
+/* HOMEPAGE NEWS */
+
+.home-news-content {
+	height: 90px;
+	margin: 5px 20px 5px 140px;
+	border-left: 3px solid #FFF;
+	padding-left: 20px;
+}
+
+article.post {
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/02/blog-border3.png);
+	background-position: bottom center;
+	background-repeat: repeat-x;
+}
+.entry-content { margin-bottom: 80px; }
+
+body.search article { padding: 10px 0px; border-bottom: 2px solid #d04036; margin-bottom: 20px; }
+
+/* Dates you need to know */
+.event-list .filterbar { display: none !important; height: 0px; }
+li.event { background-color: #dcdfc1 !important; padding: 5px !important; margin: 0px !important; margin-bottom: 5px !important; }
+.event-list .start-date { background-color: #dcdfc1 !important; text-align: center !important; width: 6em !important;  }
+.event-date { margin: 0px !important; }
+
+.event-list .startdate, .event-list .enddate { background-color: #dcdfc1 !important; }
+.event-weekday { line-height: 1em; }
+.event-month { padding: 0.2em 0 !important; }
+.event-year { font-size: .7em; line-height: .7em; padding-bottom: 0 !important; }
+
+.vc_gitem_row .vc_gitem-col { padding: 10px 0px !important; }
+
+.icon-bkgd, .icon-bkgd-orange {
+	background-color: #e4ddc0;
+	width: 90px;
+	height: 90px;
+	padding: 10px;
+	border-radius: 50%;
+	margin: auto;
+}
+.icon-bkgd-orange { background-color: #ef5423; }
+
+#footer-nav {
+	background-color: #334036;
+	background-image: url(https://hiramhousecamp.org/wp-content/uploads/2018/01/footer-bkgd.png);
+	background-repeat: repeat-x;
+	background-position: top left;
+	margin-top: 80px;
+	padding-top: 180px;
+}
+
+.desktop-pad { padding-left: 100px; padding-right: 100px; }
+
+.desktop-pad2 { padding-left: 200px; padding-right: 200px; }
+
+table td { padding: 10px !important; }
+
+/* *************** FORMS *************** */
+
+form.wpcf7-form {
+	border: 10px solid #338186;
+	margin: 20px 0px;
+	padding: 20px;
+}
+.form-control {
+	border: none;
+	border-radius: 0;
+}
+form.wpcf7-form p { margin: 0; margin-top: 5px; padding: 0; }
+
+input[type="text"], input[type="email"] {
+	border: none;
+	border-radius: 0;
+	padding: 5px;
+	width: 100%;
+	background-color: transparent;
+	border-bottom: 2px solid #d04036;
+}
+
+select.wpcf7-select {
+	border: none;
+	border-radius: 0;
+	padding: 5px;
+	width: 100%;
+	background-color: transparent;
+}
+p label .how-hear select.wpcf7-select { background-color: rgba(0,0,0,.08) !important; }
+
+.relation { 
+	display: block;
+	border-bottom: 2px solid #d04036;
+}
+select.wpcf7-select::-moz-selection{ background: #595050; color:#fff;}
+select.wpcf7-select::selection { background:#595050; color:#fff; }
+
+.wpcf7-submit {
+	background-color: #ff675b;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: .85rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.wpcf7-submit:hover {
+	color: #f7f7f7;
+	background-color: #ff4b3c;
+}
+.reqd { color: #d04036; font-weight: bold;  }
+
+/*********** TYPOGRAPHY ***********/
+
+body {
+	font-family: 'Roboto Condensed', sans-serif !important;
+	color: #595050;
+}
+h1,h2, .office-hours h3, h3.widget-title {
+	font-family: 'Playfair Display', serif !important;
+	color: #595050;
+}
+.sec-page-hdr h1 { color: white !important; }
+h1 { font-size: 60px !important; }
+h2 { font-size: 46px !important; }
+.vc_tta-panel-body h2 { font-size: 24px !important; }
+h2.small { font-size: 36px !important; }
+h1, h4 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	margin-top: 0px !important;
+	line-height: 1em !important;
+	color: #338186;
+}
+h1.lcsp_logo_title { text-transform: uppercase; letter-spacing: 1px; line-height: 1em; font-weight: 600; }
+h4 { font-size: .7em !important; color: #d04036 !important; text-transform: uppercase !important; }
+.vc_toggle_title h4 { color: #334036 !important; font-size: 1em !important; }
+
+.circle h4 { color: white !important; text-align: center;  padding-top: 47%; }
+
+.large { font-size: 1.2em; }
+.small { font-size: .85em; }
+
+a, a:link, a:visited { color: #d04036; }
+a:hover { color: #ef5423; text-decoration: none; }
+
+a.teal, a.teal:link, a.teal:visited, a.teal:hover,
+ul#menu-utility-1 li a .li-icon, ul#menu-utility-1 li a:visited .li-icon,
+ul#menu-utility li a .li-icon, ul#menu-utility li a:visited .li-icon {
+	color: white;
+}
+ul#menu-utility-1 li a:hover .li-icon, ul#menu-utility li a:hover .li-icon {
+	color: #334036;
+}
+
+.navbar-brand { font-size: 1em; }
+
+.navbar-brand p { display: inline-block !important; margin: 0 !important; }
+
+#masthead .navbar-nav > li > a {
+	color: #595050 !important;
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 500 !important;
+	padding: 0 !important;
+}
+#masthead .navbar-nav > li > a:hover, ul#menu-main li ul li > a.dropdown-item:hover { color: #338186 !important; }
+
+ul#menu-main li ul li > a.dropdown-item { color: #595050 !important; }
+ul#menu-main li ul li > a.dropdown-item:hover { color: #d04036 !important; }
+
+
+ul#menu-main li ul li.employment-link a.dropdown-item { background-color: #d04036 !important; padding: 5px !important; color: white !important; font-weight: bold; }
+ul#menu-main li ul li.employment-link a.dropdown-item:hover { color: #e4ddc0; }
+
+ul#menu-main-1 li a, ul#main-menu-1 li a:link, ul#main-menu-1 li a:visited {
+	color: #e4ddc0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.dropdown-toggle::after { 
+	border-top: 0 none; 
+	border-right: 0 none;
+	border-bottom: 0 none; 
+	border-left: 0 none;
+}
+
+a.vc_carousel-control, a:link.vc_carousel-control, a:visited.vc_carousel-control, a:hover.vc_carousel-control {
+	color: white; }
+
+.white { color: #FFFFFF; }
+.green { color: #334036; }
+.lt-green { color: #81a389; }
+.red { color: #d04036; }
+.orange { color: #ef5423; }
+.teal { color: #338186; }
+.yellow { color: #e4ddc0; }
+.lt-yellow { color: #dcdfc1; }
+
+.navbar { font-family: 'Montserrat', sans-serif !important; }
+
+#home-intro h3, h3.site-name, h3 {
+	font-family: 'haymakerregular', sans-serif !important;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
+	font-size: 34px !important;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+}
+#home-intro h3 a, #home-intro h3 a:link, #home-intro h3 a:visited, h3.site-name a, h3.site-name a:link, h3.site-name a:visited { color: white; }
+#home-intro h3 a:hover, h3.site-name a:hover { color: #e4ddc0; }
+
+.shadowed {
+	text-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.monty, .vc_btn3, .event-list .start-date {
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	font-size: 85%;
+	text-transform: uppercase;
+}
+.event-list .start-date {
+	font-size: .65em;
+	letter-spacing: 1.25px;
+	text-align: center !important;
+}
+.start-date div { width: 100% !important; text-align: center !important; }
+.event-day {
+	font-family: 'Gravitas One', Georgia, serif;
+	font-size: 32px !important;
+	line-height: 1em !important;
+}
+.event-title h1 { padding: 25px 10px !important; }
+.event-title h1 > a {
+	font-family: 'Roboto Condensed', sans-serif !important;
+	color: #595050 !important;
+	font-weight: 300 !important;
+    pointer-events: none;
+    cursor: default;
+	text-transform: none !important;
+	padding: 25px 0px;
+}
+
+
+.vc_btn3.vc_btn3-color-info, .vc_btn3.vc_btn3-color-info.vc_btn3-style-flat {
+	background-color: #338186 !important;
+}
+.vc_btn3.vc_btn3-color-info:hover, .vc_btn3.vc_btn3-color-info.vc_btn3-style-flat:hover {
+	background-color: #266165 !important;
+}
+
+/* TABS */
+
+.vc_tta-tabs-container {
+	position: relative; top: 30px;
+}
+.vc_tta-color-pink.vc_tta-style-classic .vc_tta-tab>a {
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	font-size: 85%;
+	text-transform: uppercase;
+	border-color: #d04036 !important;
+	background-color: #d04036 !important;
+}
+.vc_tta-color-pink.vc_tta-style-classic .vc_tta-tab>a:hover {
+	background-color: #ef5423 !important;
+}
+.vc_tta-color-pink.vc_tta-style-classic .vc_tta-tab.vc_active>a {
+	background-color: #ef5423 !important;
+	border-color: #ef5423 !important;
+	color: white !important;
+}
+
+.vc_tta-panel-body p, .vc_tta-panel-body td, .vc_tta-panel-body th, .vc_tta-panel-body tr {
+	color: #595050 !important;
+}
+
+/* BOTTOM CALL TO ACTION */
+
+.big-date, .days {
+	font-family: 'Gravitas One', Georgia, serif !important;
+	font-size: 90px !important;
+	line-height: 10px !important;
+	margin: 0px 20px !important;
+	color: #d04036 !important;
+	letter-spacing: 5px;
+}
+.big-word {
+	font-family: 'Gravitas One', Georgia, serif;
+	font-size: 70px;
+	line-height: 10px;
+	letter-spacing: -2px;
+	margin: 0px 20px;
+	color: #dcdfc1;
+}
+.sec-page-days { height: 120px; }
+.sec-page-days .big-date, .sec-page-days .days {
+	color: #338186 !important;
+	background-color: #334036 !important;
+	margin: 0 !important;
+	text-align: center !important;
+	letter-spacing: 5px;
+}
+.sec-page-days .big-word {
+	color: #dcdfc1;
+	background-color: #d04036;
+	margin: 0;
+	padding: 20px 0px;
+	text-align: center;
+}
+.sec-page-days .days-bkgd {
+	padding: 20px !important;
+	font-size: .95em;
+	margin-top: 20px;
+}
+.days-register-now {
+	background-color: #338186;
+	margin: 0;
+	padding: 0px 20px;
+	text-align: center;
+}
+.days-register-now a, .days-register-now a:link, .days-register-now a:visited {
+	font-weight: 600;
+	color: #e4ddc0;
+	font-size: 1.5em;
+}
+.days-register-now a:hover { color: white; }
+
+#main_countedown_1 .time_left { background-color: transparent !important; }
+.time_left {
+	padding: 0;
+}
+.time_description, .hourse, .minutes, .secondes { display: none !important; width: 0; height: 0; }
+.element_conteiner { display: inline !important; }
+.time_left { padding-left: 0 !important; padding-right: 0 !important; font-weight: nornal !important; }
+
+#countdown-container { position: relative; }
+#no-countdown { position: absolute; top:0; left: 0; z-index: 997;  background-color: #d04036; width: 100%; }
+body.home #no-countdown { background-color: #334036; }
+
+#footer-nav, footer#colophon {
+	color: #e4ddc0 !important;
+}
+
+#footer-nav a, #footer-nav a:link, #footer-nav a:visited,
+footer#colophon a, footer#colophon a:link, footer#colophon a:visited { color: #ef5423 }
+#footer-nav a:hover, footer#colophon a:hover { color: #d04036; }
+
+@media screen and (max-width: 1024px) {
+	.sec-page-days .days-bkgd { padding: 20px 0px !important; }
+}
+
+
+@media screen and (max-width: 768px) {
+	.flex-row {
+		-ms-flex-direction: column!important;
+		flex-direction: column!important;
+	}
+	ul#menu-main li.menu-item-has-children, ul#menu-main-1 li.menu-item-has-children, li.school-camps {
+		width: 100%;
+	}
+	.dropdown-toggle::after {
+		border-top: .3em solid;
+    	border-right: .3em solid transparent;
+    	border-bottom: 0;
+    	border-left: .3em solid transparent;
+	}
+	.desktop-pad, .desktop-pad2 { padding-left: 10px !important; padding-right: 10px !important; }
+	#content.site-content { padding-top:  0 !important; padding-bottom: 0 !important; }
+	
+	/* Camper Info tab colors*/
+	.wpb-js-composer .vc_tta-color-pink.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-heading {
+		border-color: #fe5e52 !important;
+		background-color: #fe5e52 !important;
+	}
+	.wpb-js-composer .vc_tta-color-pink.vc_tta-style-classic .vc_tta-panel.vc_active .vc_tta-panel-title>a { color: white !important; }
+	
+	#countdown-container { display: none !important; }
+	/* Campership fund text margin */
+	.vc_custom_1519017699688 { margin-left: 20px !important; }
+}
+
+@media screen and (max-width: 480px) {
+	.sec-page-hdr p.monty img, .home-page-hdr p.monty img { width: 100px; height: auto; }
+	
+	.home-news-content {
+		height: 300px;
+		margin: 0px;
+		border-left: 0;
+		padding-left: 0px;
+		padding: 10px;
+	}
+	.home-news-content .vc_gitem-post-data-source-post_date {
+		padding-top: 10px; border-top: 3px solid white;
+	}
+	
+	
+	.vc_media_grid .vc_grid-item {
+		display: inline-block !important;
+		width: 33% !important;
+	}
+	
+	/* Diamond shape too high on mobile*/
+	.vc_custom_1516719973348, .vc_custom_1516719973348, .vc_custom_1516719973348 { margin-top: -50px; }
+	
+	/* Campership fund text margin */
+	.vc_custom_1519017699688 { margin-left: 0px !important; margin-top: 20px; }
+	
+}
